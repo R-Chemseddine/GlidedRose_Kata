@@ -18,18 +18,17 @@ class GildedRose {
             switch (item.name) {
                 case "Aged Brie":
                 
-                item.quality++;
-                
-                
-                if (item.sellIn < 0) {
-                        item.quality++;
-                }
+                    item.quality++;
+
+                    if (item.sellIn < 0) {
+                            item.quality++;
+                    }
                     break;
                 
                 case "Backstage passes to a TAFKAL80ETC concert":
-                    
+
                     item.quality++;
-                    
+
                     if (item.sellIn < 10) {
                         item.quality++;
                     }
@@ -49,7 +48,7 @@ class GildedRose {
                         item.quality--;
                     }
 
-                    if (item.sellIn < -1 && item.quality > 0) {
+                    if (item.sellIn < 0 && item.quality > 0) {
                         item.quality--;
                     }
                     break;
