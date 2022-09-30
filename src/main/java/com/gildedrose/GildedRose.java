@@ -9,6 +9,9 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
+            if (item.name.equals("Sulfuras, Hand of Ragnaros")) {
+                continue;
+            }
             switch (item.name) {
                 case "Aged Brie":
                 if (item.quality < 50) {
