@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.gildedrose.GildedRoseTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-09-30T12:37:34" hostname="kali" time="0.294">
+  <properties/>
+  <testcase name="Tests on the 'Aged Brie'" classname="com.gildedrose.GildedRoseTest" time="0.054"/>
+  <testcase name="Test the quality and sellin of 'elexir'" classname="com.gildedrose.GildedRoseTest" time="0.003"/>
+  <testcase name="Test quality  &gt; 0" classname="com.gildedrose.GildedRoseTest" time="0.008"/>
+  <testcase name="Tests on the 'Backstage passes'" classname="com.gildedrose.GildedRoseTest" time="0.007"/>
+  <testcase name="Test that the quality and sellin of 'mana cake' is unchanged" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
+  <testcase name="Test that the name is unchanged" classname="com.gildedrose.GildedRoseTest" time="0.004"/>
+  <testcase name="Test that the quality of the elements is between 0 and 50" classname="com.gildedrose.GildedRoseTest" time="0.009"/>
+  <testcase name="Test that the quality and sellin of 'Sulfuras' is unchanged" classname="com.gildedrose.GildedRoseTest" time="0.005"/>
+  <testcase name="Test toString" classname="com.gildedrose.GildedRoseTest" time="0.142"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
