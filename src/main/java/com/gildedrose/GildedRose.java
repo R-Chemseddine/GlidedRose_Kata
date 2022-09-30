@@ -11,7 +11,7 @@ class GildedRose {
         for (Item item : items) {
             switch (item.name) {
                 case "Aged Brie":
-                    
+                    item.sellIn--;
                     break;
                 
                 case "Backstage passes to a TAFKAL80ETC concert":
@@ -26,12 +26,14 @@ class GildedRose {
                             item.quality++;
                         }
                     }
+                    item.sellIn--;
                     break;
                 case "Sulfuras, Hand of Ragnaros":
 
                     break;
             
                 default:
+                    item.sellIn--;
                     break;
             }
             if (!item.name.equals("Aged Brie")
@@ -45,10 +47,6 @@ class GildedRose {
                 if (item.quality < 50) {
                     item.quality++;
                 }
-            }
-
-            if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
-                item.sellIn--;
             }
 
             if (item.sellIn < 0) {
