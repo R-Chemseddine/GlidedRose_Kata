@@ -15,7 +15,13 @@ class GildedRose {
                     item.quality++;
                 }
                  
-                item.sellIn--;    
+                item.sellIn--;  
+                
+                if (item.sellIn < 0) {
+                    if (item.quality < 50) {
+                        item.quality++;
+                    }
+                }
                     break;
                 
                 case "Backstage passes to a TAFKAL80ETC concert":
@@ -59,15 +65,6 @@ class GildedRose {
                     break;
             }
 
-            if (item.sellIn < 0) {
-                if (!item.name.equals("Aged Brie")) {
-                    
-                } else {
-                    if (item.quality < 50) {
-                        item.quality++;
-                    }
-                }
-            }
         }
     }
 }
