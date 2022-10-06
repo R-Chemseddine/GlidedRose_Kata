@@ -55,28 +55,35 @@ public class Item {
 
             case &quot;Conjured Mana Cake&quot;:
 <span class="fc" id="L57">                this.quality = this.quality - 2;</span>
-<span class="fc" id="L58">                break;</span>
+
+<span class="fc bfc" id="L59" title="All 2 branches covered.">                if(this.sellIn &lt; 0){</span>
+<span class="fc" id="L60">                    this.quality = this.quality - 2;</span>
+                }
+                break;
+
+            //case &quot;Elixir of the Mongoose&quot;:
+
+                //break;
         
             default:
-
-<span class="fc" id="L62">                this.quality--;</span>
+<span class="fc" id="L69">                this.quality--;</span>
                 
-<span class="fc bfc" id="L64" title="All 2 branches covered.">                if (this.sellIn &lt; 0) {</span>
-<span class="fc" id="L65">                    this.quality--;</span>
+<span class="fc bfc" id="L71" title="All 2 branches covered.">                if (this.sellIn &lt; 0) {</span>
+<span class="fc" id="L72">                    this.quality--;</span>
                 }
                 break;
         }
-<span class="fc bfc" id="L69" title="All 2 branches covered.">        if (this.quality &gt; 50) {</span>
-<span class="fc" id="L70">            this.quality = 50;</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">        if (this.quality &gt; 50) {</span>
+<span class="fc" id="L77">            this.quality = 50;</span>
         }
-<span class="fc bfc" id="L72" title="All 2 branches covered.">        if (this.quality &lt; 0){</span>
-<span class="fc" id="L73">            this.quality = 0;</span>
+<span class="fc bfc" id="L79" title="All 2 branches covered.">        if (this.quality &lt; 0){</span>
+<span class="fc" id="L80">            this.quality = 0;</span>
         }
-<span class="fc" id="L75">    }</span>
+<span class="fc" id="L82">    }</span>
 
    @Override
    public String toString() {
-<span class="fc" id="L79">        return this.name + &quot;, &quot; + this.sellIn + &quot;, &quot; + this.quality;</span>
+<span class="fc" id="L86">        return this.name + &quot;, &quot; + this.sellIn + &quot;, &quot; + this.quality;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

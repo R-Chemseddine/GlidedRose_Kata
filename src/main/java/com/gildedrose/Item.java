@@ -19,6 +19,7 @@ public class Item {
     }
 
     public void updateQuality(){
+
         if (this.name.equals("Sulfuras, Hand of Ragnaros")) {
             return;
         }
@@ -54,19 +55,14 @@ public class Item {
                 break;
 
             case "Conjured Mana Cake":
-                this.quality = this.quality - 2;
+                this.quality -= 2;
 
                 if(this.sellIn < 0){
-                    this.quality = this.quality - 2;
+                    this.quality -= 2;
                 }
                 break;
-
-            //case "Elixir of the Mongoose":
-              //  this.quality++;
-                //break;
         
             default:
-
                 this.quality--;
                 
                 if (this.sellIn < 0) {
