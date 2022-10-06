@@ -55,7 +55,15 @@ public class Item {
 
             case "Conjured Mana Cake":
                 this.quality = this.quality - 2;
+
+                if(this.sellIn < 0){
+                    this.quality = this.quality - 2;
+                }
                 break;
+
+            //case "Elixir of the Mongoose":
+              //  this.quality++;
+                //break;
         
             default:
 
