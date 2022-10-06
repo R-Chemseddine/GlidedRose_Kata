@@ -11,7 +11,11 @@ public class Item {
     public Item(String name, int sellIn, int quality) {
         this.name = name;
         this.sellIn = sellIn;
-        this.quality = quality;
+        if (this.name.equals("Sulfuras, Hand of Ragnaros")){
+            this.quality = 80;
+        }else{
+            this.quality = quality;
+        }
     }
 
     public void updateQuality(){

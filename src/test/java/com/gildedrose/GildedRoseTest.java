@@ -45,16 +45,16 @@ class GildedRoseTest {
   @Test
   @DisplayName("Test that the quality and sellin of 'Sulfuras' is unchanged")
   void testSulfuras() {
-    Item element = new Item("Sulfuras, Hand of Ragnaros", 4, 30);
-    Item element1 = new Item("Sulfuras, Hand of Ragnaros", -1, 30);
+    Item element = new Item("Sulfuras, Hand of Ragnaros", 4, 80);
+    Item element1 = new Item("Sulfuras, Hand of Ragnaros", -1, 80);
 
     GildedRose app = new GildedRose(new Item[] {element, element1});
     app.updateQuality();
     assertThat(element.sellIn, is(4));
-    assertThat(element.quality, is(30));
+    assertThat(element.quality, is(80));
 
     assertThat(element1.sellIn, is(-1));
-    assertThat(element1.quality, is(30));
+    assertThat(element1.quality, is(80));
   }
 
   @Test
