@@ -73,14 +73,14 @@ class GildedRoseTest {
   }
 
   @Test
-  @DisplayName("Test that the quality and sellin of 'mana cake' is unchanged")
+  @DisplayName("Test the quality and sellin of 'mana cake'")
   void testMana() {
     Item element = new Item("Conjured Mana Cake", 5, 30);
 
     GildedRose app = new GildedRose(new Item[] {element});
     app.updateQuality();
     assertThat(element.sellIn, is(4));
-    assertThat(element.quality, is(29));
+    assertThat(element.quality, is(28));
   }
 
   @Test
@@ -163,8 +163,6 @@ class GildedRoseTest {
     assertThat(element.sellIn, is(-1));
     assertThat(element.quality, is(0));
   }
-
-
 
 }
 

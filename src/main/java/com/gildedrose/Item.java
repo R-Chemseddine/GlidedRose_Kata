@@ -48,6 +48,10 @@ public class Item {
                 }
 
                 break;
+
+            case "Conjured Mana Cake":
+                this.quality = this.quality - 2;
+                break;
         
             default:
 
