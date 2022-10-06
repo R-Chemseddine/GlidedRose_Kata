@@ -14,9 +14,61 @@ public class Item {
 <span class="fc" id="L14">        this.quality = quality;</span>
 <span class="fc" id="L15">    }</span>
 
+    public void updateQuality(){
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        if (this.name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
+<span class="fc" id="L19">            return;</span>
+        }
+
+<span class="fc" id="L22">        this.sellIn--;</span>
+
+<span class="fc bfc" id="L24" title="All 3 branches covered.">        switch (this.name) {</span>
+            case &quot;Aged Brie&quot;:
+            
+<span class="fc" id="L27">                this.quality++;</span>
+
+<span class="fc bfc" id="L29" title="All 2 branches covered.">                if (this.sellIn &lt; 0) {</span>
+<span class="fc" id="L30">                        this.quality++;</span>
+                }
+                break;
+            
+            case &quot;Backstage passes to a TAFKAL80ETC concert&quot;:
+
+<span class="fc" id="L36">                this.quality++;</span>
+
+<span class="fc bfc" id="L38" title="All 2 branches covered.">                if (this.sellIn &lt; 10) {</span>
+<span class="fc" id="L39">                    this.quality++;</span>
+                }
+
+<span class="fc bfc" id="L42" title="All 2 branches covered.">                if (this.sellIn &lt; 5) {</span>
+<span class="fc" id="L43">                        this.quality++;</span>
+                }
+
+<span class="fc bfc" id="L46" title="All 2 branches covered.">                if (this.sellIn &lt; 0) {</span>
+<span class="fc" id="L47">                    this.quality = 0;</span>
+                }
+
+                break;
+        
+            default:
+
+<span class="fc" id="L54">                this.quality--;</span>
+                
+<span class="fc bfc" id="L56" title="All 2 branches covered.">                if (this.sellIn &lt; 0) {</span>
+<span class="fc" id="L57">                    this.quality--;</span>
+                }
+                break;
+        }
+<span class="fc bfc" id="L61" title="All 2 branches covered.">        if (this.quality &gt; 50) {</span>
+<span class="fc" id="L62">            this.quality = 50;</span>
+        }
+<span class="fc bfc" id="L64" title="All 2 branches covered.">        if (this.quality &lt; 0){</span>
+<span class="fc" id="L65">            this.quality = 0;</span>
+        }
+<span class="fc" id="L67">    }</span>
+
    @Override
    public String toString() {
-<span class="fc" id="L19">        return this.name + &quot;, &quot; + this.sellIn + &quot;, &quot; + this.quality;</span>
+<span class="fc" id="L71">        return this.name + &quot;, &quot; + this.sellIn + &quot;, &quot; + this.quality;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
